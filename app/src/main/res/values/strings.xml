@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Gardener</string>
+    <string name="top_text">Price Calculator</string>
+    <string name="tab_services">Services</string>
+    <string name="tab_goods">Goods</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="popup_hint">Set new price</string>
+    <string name="popup_save">Save</string>
+    <string name="button_calculate">Calculate</string>
+</resources>
