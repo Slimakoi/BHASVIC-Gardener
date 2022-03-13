@@ -6,18 +6,469 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cardsList"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        app:layoutManager="LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/cardOne"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="@drawable/background_card"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/cardNameOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center"
+                    android:text="@string/card_name_one"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="RelativeOverlap,RtlHardcoded">
+
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cardCheckOne"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameOne"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:buttonTint="@color/top">
+
+                </CheckBox>
+
+                <EditText
+                    android:id="@+id/cardPriceOne"
+                    android:layout_width="128dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameOne"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toEndOf="@+id/cardCheckOne"
+                    android:background="@drawable/textbox"
+                    android:gravity="left|center"
+                    android:hint="Price"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="6dp"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/cardImageOne"
+                    android:layout_width="64dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="@string/card_image_service"
+                    android:src="@color/top">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cardTwo"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="@drawable/background_card"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/cardNameTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/white"
+                    android:gravity="left|center"
+                    android:text="@string/card_name_two"
+                    android:textSize="16sp"
+                    tools:ignore="RelativeOverlap,RtlHardcoded">
+
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cardCheckTwo"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameTwo"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:buttonTint="@color/top">
+
+                </CheckBox>
+
+                <EditText
+                    android:id="@+id/cardPriceTwo"
+                    android:layout_width="128dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameTwo"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toEndOf="@+id/cardCheckTwo"
+                    android:background="@drawable/textbox"
+                    android:gravity="left|center"
+                    android:hint="Price"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textSize="16sp"
+                    android:paddingStart="6dp"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/cardImageTwo"
+                    android:layout_width="64dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="@string/card_image_service"
+                    android:src="@color/top">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cardThree"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="@drawable/background_card"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/cardNameThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center"
+                    android:text="@string/card_name_three"
+                    android:textSize="16sp"
+                    tools:ignore="RelativeOverlap,RtlHardcoded">
+
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cardCheckThree"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameThree"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:buttonTint="@color/top">
+
+                </CheckBox>
+
+                <EditText
+                    android:id="@+id/cardPriceThree"
+                    android:layout_width="128dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameThree"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toEndOf="@+id/cardCheckThree"
+                    android:background="@drawable/textbox"
+                    android:gravity="left|center"
+                    android:hint="Price"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="6dp"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/cardImageThree"
+                    android:layout_width="64dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="@string/card_image_service"
+                    android:src="@color/top">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <!-- Good's Cards -->
+
+            <RelativeLayout
+                android:id="@+id/cardFour"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="@drawable/background_card"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/cardNameFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center"
+                    android:textColor="@color/white"
+                    android:text="@string/card_name_four"
+                    android:textSize="16sp"
+                    tools:ignore="RelativeOverlap,RtlHardcoded">
+
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cardCheckFour"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameFour"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:buttonTint="@color/top">
+
+                </CheckBox>
+
+                <EditText
+                    android:id="@+id/cardPriceFour"
+                    android:layout_width="128dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameFour"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toEndOf="@+id/cardCheckFour"
+                    android:background="@drawable/textbox"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left|center"
+                    android:hint="Price"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="6dp"
+                    android:text="@string/good_price_one"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/cardImageFour"
+                    android:layout_width="64dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="@string/card_image_service"
+                    android:src="@color/top">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cardFive"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="@drawable/background_card"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/cardNameFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center"
+                    android:textColor="@color/white"
+                    android:text="@string/card_name_five"
+                    android:textSize="16sp"
+                    tools:ignore="RelativeOverlap,RtlHardcoded">
+
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cardCheckFive"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameFive"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:buttonTint="@color/top">
+
+                </CheckBox>
+
+                <EditText
+                    android:id="@+id/cardPriceFive"
+                    android:layout_width="128dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameFive"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toEndOf="@+id/cardCheckFive"
+                    android:background="@drawable/textbox"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left|center"
+                    android:hint="Price"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="6dp"
+                    android:text="@string/good_price_two"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/cardImageFive"
+                    android:layout_width="64dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="@string/card_image_service"
+                    android:src="@color/top">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cardSix"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="@drawable/background_card"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/cardNameSix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|center"
+                    android:textColor="@color/white"
+                    android:text="@string/card_name_six"
+                    android:textSize="16sp"
+                    tools:ignore="RelativeOverlap,RtlHardcoded">
+
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cardCheckSix"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameSix"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:buttonTint="@color/top">
+
+                </CheckBox>
+
+                <EditText
+                    android:id="@+id/cardPriceSix"
+                    android:layout_width="128dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/cardNameSix"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toEndOf="@+id/cardCheckSix"
+                    android:background="@drawable/textbox"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left|center"
+                    android:hint="Price"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:text="@string/good_price_three"
+                    android:textSize="16sp"
+                    android:paddingStart="6dp"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/cardImageSix"
+                    android:layout_width="64dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="@string/card_image_service"
+                    android:src="@color/top">
+
+                </ImageView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/button_calculate"

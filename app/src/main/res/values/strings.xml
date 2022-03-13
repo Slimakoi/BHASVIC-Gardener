@@ -3,9 +3,31 @@
     <string name="top_text">Price Calculator</string>
     <string name="tab_services">Services</string>
     <string name="tab_goods">Goods</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Popup Strings (UNUSED) -->
     <string name="popup_hint">Set new price</string>
     <string name="popup_save">Save</string>
+
     <string name="button_calculate">Calculate</string>
+
+    <!-- Card Strings -->
+    <string name="card_name_one">Service 1</string>
+    <string name="card_name_two">Service 2</string>
+    <string name="card_name_three">Service 3</string>
+    <string name="card_name_four">Good 1</string>
+    <string name="card_name_five">Good 2</string>
+    <string name="card_name_six">Good 3</string>
+
+    <string name="card_image_service">Service</string>
+
+    <!-- Good's Prices -->
+    <string name="good_price_one">9</string>
+    <string name="good_price_two">10</string>
+    <string name="good_price_three">21</string>
+
+    <!-- Template Strings -->
+    <string name="final_calculation">The final price comes to %1$s£ (VAT included)</string>
+
+    <!-- Error Strings -->
+    <string name="error_nothing_checked">No Services or Goods Checked!</string>
 </resources>
