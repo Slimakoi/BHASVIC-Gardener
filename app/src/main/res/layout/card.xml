@@ -3,11 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="6dp" >
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp"
+    android:paddingTop="6dp">
 
     <RelativeLayout
+        android:id="@+id/card"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="69dp"
         android:background="@drawable/background_card"
         tools:ignore="UselessParent">
 
@@ -16,12 +19,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="6dp"
             android:layout_marginTop="6dp"
             android:gravity="left|center"
-            android:text="card name"
+            android:text="@string/card_name"
+            android:textColor="@color/white"
             android:textSize="16sp"
-            tools:ignore="HardcodedText,RtlHardcoded">
+            tools:ignore="RelativeOverlap,RtlHardcoded">
 
         </TextView>
 
@@ -30,8 +35,10 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_below="@+id/cardName"
+            android:layout_alignParentStart="true"
             android:layout_marginStart="6dp"
-            android:layout_marginBottom="6dp">
+            android:layout_marginBottom="6dp"
+            android:buttonTint="@color/top">
 
         </CheckBox>
 
@@ -44,10 +51,27 @@
             android:layout_toEndOf="@+id/cardCheck"
             android:background="@drawable/textbox"
             android:gravity="left|center"
-            android:hint="Price"
+            android:hint="@string/card_price"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:paddingStart="6dp"
             android:textSize="16sp"
-            tools:ignore="HardcodedText,RtlHardcoded">
+            tools:ignore="RtlHardcoded,RtlSymmetry">
 
         </EditText>
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/card_image"
+            android:src="@color/top"></ImageView>
     </RelativeLayout>
 </RelativeLayout>

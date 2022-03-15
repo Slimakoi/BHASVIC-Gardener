@@ -1,7 +1,8 @@
 package com.bhasvic.gardener.models
 
-import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-
-data class Card(var cardName: String)
+data class Card(
+    var name: String,
+    var price: String = "",
+    var editable: Boolean = true,
+    var checked: Boolean = false
+)
