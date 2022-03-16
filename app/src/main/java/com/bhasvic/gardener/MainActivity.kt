@@ -8,11 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bhasvic.gardener.adapters.CardAdapter
 import com.bhasvic.gardener.models.Card
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 
 val services = listOf("A", "B", "C")
 val goods = listOf("Test 1", "Test 2", "Test 3")
 val goods_prices = listOf("9", "10", "21")
+const val vat = 1.20
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("InflateParams", "StringFormatMatches")
@@ -50,6 +53,7 @@ class MainActivity : AppCompatActivity() {
                 tempList.add(cardAdapter.getItem(item).checked.toString().toBoolean())
             }
 
+            // Check if all of the CheckBoxes are not checked
             val tempFilter = tempList.filter { s -> s }
 
             if (tempFilter.isEmpty()) {
@@ -57,14 +61,23 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-
             // Actual stuff
+            var pricePart = 0
+
             for (item in 0 until (services.size + goods.size)) {
                 val ca = cardAdapter.getItem(item)
 
-                val price = if (ca.price == "") { "0" } else { ca.price }
-                println(price)
+                // If price is empty '0' else 'ca.price'
+                val price = ca.price.ifEmpty { "0" }
+
+                if (ca.checked) {
+                    pricePart += price.toInt()
+                }
             }
+
+            // Display final price
+            val finalPrice = BigDecimal(pricePart * vat).setScale(2, RoundingMode.HALF_EVEN)
+            Toast.makeText(this, getString(R.string.final_calculation, finalPrice), Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -2,10 +2,11 @@ package com.bhasvic.gardener.adapters
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
@@ -16,6 +17,7 @@ import com.bhasvic.gardener.models.Card
 
 
 class CardAdapter(private val ctx: Context) : RecyclerView.Adapter<ServicesViewHolder>() {
+
     private val messages: ArrayList<Card> = ArrayList()
 
     @SuppressLint("NotifyDataSetChanged")
@@ -61,6 +63,16 @@ class CardAdapter(private val ctx: Context) : RecyclerView.Adapter<ServicesViewH
             cardCheck.setOnClickListener {
                 message.checked = cardCheck.isChecked
             }
+
+            cardPrice.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
+
+                override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+                    messages[adapterPosition].setPrice(cardPrice.text.toString())
+                }
+
+                override fun afterTextChanged(editable: Editable) {}
+            })
 
             if (!message.editable) {
                 cardPrice.isEnabled = false

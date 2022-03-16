@@ -5,4 +5,9 @@ data class Card(
     var price: String = "",
     var editable: Boolean = true,
     var checked: Boolean = false
-)
+) {
+    @JvmName("setPrice1")
+    fun setPrice(editTextValue: String) {
+        this.price = editTextValue
+    }
+}
