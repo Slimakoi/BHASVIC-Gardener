@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        title = "Calculations"
+        title = getString(R.string.top_text)
 
         // Define the variables
         val cardsList = findViewById<RecyclerView>(R.id.cardsList)
@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
             val toAdd = Card(name = "Goods: ${goods[item]}", price = goods_prices[item], editable = false)
             cardAdapter.addMessage(toAdd)
         }
-
 
         buttonCalculate.setOnClickListener {
             // Stuff to check if none of the CheckBoxes are selected

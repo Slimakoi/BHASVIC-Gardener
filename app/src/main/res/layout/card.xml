@@ -55,6 +55,7 @@
             android:importantForAutofill="no"
             android:inputType="number"
             android:paddingStart="6dp"
+            android:paddingEnd="6dp"
             android:textSize="16sp"
             tools:ignore="RtlHardcoded,RtlSymmetry">
 
@@ -72,6 +73,8 @@
             android:layout_marginEnd="6dp"
             android:layout_marginBottom="6dp"
             android:contentDescription="@string/card_image"
-            android:src="@color/top"></ImageView>
+            android:src="@color/top">
+
+        </ImageView>
     </RelativeLayout>
 </RelativeLayout>
